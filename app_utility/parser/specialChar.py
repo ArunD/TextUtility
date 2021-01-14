@@ -6,7 +6,7 @@ class SpecialCharParser:
     #def __init__(self, tmp_dir):
     #    self.tmp_dir = tmp_dir
 
-    def parse(self,datatype,document,charList):
+    def parse(self,datatype,document):
         #print(document)
         legal_chars =  string.ascii_letters + string.digits
         legal_chars = '[^%s\n]+' % re.escape(legal_chars)

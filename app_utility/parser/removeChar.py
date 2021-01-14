@@ -4,10 +4,10 @@ import string
 import io
 class RemoveCharParser:
 
-    #def __init__(self, tmp_dir):
-    #    self.tmp_dir = tmp_dir
+    def __init__(self, charList):
+        self.charList = charList
 
-    def parse(self,datatype,document,charList):
+    def parse(self,datatype,document):
 
         pattern = '\r'
         carriage = "\r"
@@ -15,7 +15,7 @@ class RemoveCharParser:
         space = "\s"
         tab = "\t"
 
-        pattern = ''.join(charList)
+        pattern = ''.join(self.charList)
         pattern = pattern + "\r"
         pattern = '[%s]+' % pattern
         #legal_chars = '[^%s\s\n]+' % re.escape(legal_chars)
